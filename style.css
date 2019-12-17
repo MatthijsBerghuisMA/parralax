@@ -3,13 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
-  
+    scroll-behavior: smooth;
 }
-
 
 body {
     background: #fdfdfd;
 }
 
+img:not(.thumbnail) {
+    margin: 50px 0;
+    width: 100%;
+    height: 50vh;
+}
+
+.thumbnail {
+    margin: 50px 0px 50px 0px;
+}
+
+.banner {
+    margin: 50px 0px;
+}

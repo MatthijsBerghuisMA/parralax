@@ -12,18 +12,50 @@
 </head>
 
 <body>
-    <img class="thumbnail" src="https://i.pinimg.com/originals/d1/77/27/d1772777fb0ea141fa22a9dbcbffc577.jpg" alt="image">
-    <img class="thumbnail1" src="http://www.frostint.com/wp-content/uploads/2014/01/dbtreesPhotoxpress_9939515.jpg" alt="image">
-</body>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-<script>
-var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image);
 
-    var image = document.getElementsByClassName('thumbnail1');
-new simpleParallax(image, {
-	orientation: 'right'
-});
-</script>
+    <div class="banner">
+        <img id="banner1" class="thumbnail"
+            src="https://i.pinimg.com/originals/d1/77/27/d1772777fb0ea141fa22a9dbcbffc577.jpg" alt="image">
+    </div>
+    <div class="banner">
+        <img id="banner2" class="thumbnail1"
+            src="http://www.frostint.com/wp-content/uploads/2014/01/dbtreesPhotoxpress_9939515.jpg" alt="image">
+    </div>
+    <div class="banner">
+        <img id="banner3" class="thumbnail2"
+            src="https://www.nature-experience-group.com/wp-content/uploads/2018/10/sani-lodge-banner.jpg" alt="image">
+    </div>
+    <div class="banner">
+        <img id="banner4" class="thumbnail3"
+            src="https://www.nature-and-respect.com/content/themes/natureetrespect/assets/images/banner5.jpg"
+            alt="image">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+
+    <script>
+        // img 1 heeft een simpel parralax effect en beweegt lichtelijk naar boven en bedeneden.
+        var image = document.getElementsByClassName('thumbnail');
+        new simpleParallax(image);
+
+        // img 2 heeft een scroll effect. deze beweegt naar rechts.
+        var image = document.getElementsByClassName('thumbnail1');
+        new simpleParallax(image, {
+            orientation: 'right'
+        });
+
+        // img 3 heeft een zoom effect. als je op de pagina scrollt, scroll je ook een beetje door de pagina zelf.
+        var image = document.getElementsByClassName('thumbnail2');
+        new simpleParallax(image, {
+            scale: 1.5
+        });
+
+        // img 4 heeft een wat minder te zien transition die wat later opkomt, hier duurt het 0.7s todat hij een beetje beweegt.
+        var image = document.getElementsByClassName('thumbnail3');
+        new simpleParallax(image, {
+            delay: .7,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
+    </script>
+</body>
 
 </html>
