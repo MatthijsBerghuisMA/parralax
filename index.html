@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="Matthijs Berghuis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Parralax Scrolling</title>
+    <meta description="Dit is de nieuwe parralax scroller voor Theo den Blanken">
+</head>
+
+<body>
+    <img class="thumbnail" src="https://i.pinimg.com/originals/d1/77/27/d1772777fb0ea141fa22a9dbcbffc577.jpg" alt="image">
+    <img class="thumbnail1" src="http://www.frostint.com/wp-content/uploads/2014/01/dbtreesPhotoxpress_9939515.jpg" alt="image">
+</body>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
+<script>
+var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image);
+
+    var image = document.getElementsByClassName('thumbnail1');
+new simpleParallax(image, {
+	orientation: 'right'
+});
+</script>
+
+</html>
